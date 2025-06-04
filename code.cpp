@@ -21,6 +21,34 @@ int energy_planet_P = 0, energy_planet_Q = 0, energy_planet_R = 0, energy_planet
 int energy_planet_U = 0, energy_planet_V = 0, energy_planet_W = 0, energy_planet_X = 0, energy_planet_Y = 0;
 int energy_planet_Z = 0;
 
+//Conexiones de los planetas 0<=x<=5
+char con_A_1 = '\0', con_A_2 = '\0', con_A_3 = '\0', con_A_4 = '\0', con_A_5 = '\0';
+char con_B_1 = '\0', con_B_2 = '\0', con_B_3 = '\0', con_B_4 = '\0', con_B_5 = '\0';
+char con_C_1 = '\0', con_C_2 = '\0', con_C_3 = '\0', con_C_4 = '\0', con_C_5 = '\0';
+char con_D_1 = '\0', con_D_2 = '\0', con_D_3 = '\0', con_D_4 = '\0', con_D_5 = '\0';
+char con_E_1 = '\0', con_E_2 = '\0', con_E_3 = '\0', con_E_4 = '\0', con_E_5 = '\0';
+char con_F_1 = '\0', con_F_2 = '\0', con_F_3 = '\0', con_F_4 = '\0', con_F_5 = '\0';
+char con_G_1 = '\0', con_G_2 = '\0', con_G_3 = '\0', con_G_4 = '\0', con_G_5 = '\0';
+char con_H_1 = '\0', con_H_2 = '\0', con_H_3 = '\0', con_H_4 = '\0', con_H_5 = '\0';
+char con_I_1 = '\0', con_I_2 = '\0', con_I_3 = '\0', con_I_4 = '\0', con_I_5 = '\0';
+char con_J_1 = '\0', con_J_2 = '\0', con_J_3 = '\0', con_J_4 = '\0', con_J_5 = '\0';
+char con_K_1 = '\0', con_K_2 = '\0', con_K_3 = '\0', con_K_4 = '\0', con_K_5 = '\0';
+char con_L_1 = '\0', con_L_2 = '\0', con_L_3 = '\0', con_L_4 = '\0', con_L_5 = '\0';
+char con_M_1 = '\0', con_M_2 = '\0', con_M_3 = '\0', con_M_4 = '\0', con_M_5 = '\0';
+char con_N_1 = '\0', con_N_2 = '\0', con_N_3 = '\0', con_N_4 = '\0', con_N_5 = '\0';
+char con_O_1 = '\0', con_O_2 = '\0', con_O_3 = '\0', con_O_4 = '\0', con_O_5 = '\0';
+char con_P_1 = '\0', con_P_2 = '\0', con_P_3 = '\0', con_P_4 = '\0', con_P_5 = '\0';
+char con_Q_1 = '\0', con_Q_2 = '\0', con_Q_3 = '\0', con_Q_4 = '\0', con_Q_5 = '\0';
+char con_R_1 = '\0', con_R_2 = '\0', con_R_3 = '\0', con_R_4 = '\0', con_R_5 = '\0';
+char con_S_1 = '\0', con_S_2 = '\0', con_S_3 = '\0', con_S_4 = '\0', con_S_5 = '\0';
+char con_T_1 = '\0', con_T_2 = '\0', con_T_3 = '\0', con_T_4 = '\0', con_T_5 = '\0';
+char con_U_1 = '\0', con_U_2 = '\0', con_U_3 = '\0', con_U_4 = '\0', con_U_5 = '\0';
+char con_V_1 = '\0', con_V_2 = '\0', con_V_3 = '\0', con_V_4 = '\0', con_V_5 = '\0';
+char con_W_1 = '\0', con_W_2 = '\0', con_W_3 = '\0', con_W_4 = '\0', con_W_5 = '\0';
+char con_X_1 = '\0', con_X_2 = '\0', con_X_3 = '\0', con_X_4 = '\0', con_X_5 = '\0';
+char con_Y_1 = '\0', con_Y_2 = '\0', con_Y_3 = '\0', con_Y_4 = '\0', con_Y_5 = '\0';
+char con_Z_1 = '\0', con_Z_2 = '\0', con_Z_3 = '\0', con_Z_4 = '\0', con_Z_5 = '\0';
+
 int contador_planetas = 0;
 
 void registro_de_planetas(char P){
@@ -130,6 +158,193 @@ void registro_de_planetas(char P){
     }
 }
 
+void conexiones(char origen, char destino){
+     if(origen == 'A'){
+          //espacios de conexiones
+          if(con_A_1 == '\0'){con_A_1 = destino;}
+          else if(con_A_2 == '\0'){con_A_2 = destino;}
+          else if(con_A_3 == '\0'){con_A_3 = destino;}
+          else if(con_A_4 == '\0'){con_A_4 = destino;}
+          else if(con_A_5 == '\0'){con_A_5 = destino;}
+     }
+     else if(origen == 'B'){
+          if(con_B_1 == '\0'){con_B_1 = destino;}
+          else if(con_B_2 == '\0'){con_B_2 = destino;}
+          else if(con_B_3 == '\0'){con_B_3 = destino;}
+          else if(con_B_4 == '\0'){con_B_4 = destino;}
+          else if(con_B_5 == '\0'){con_B_5 = destino;}
+     }
+     else if(origen == 'C'){
+          if(con_C_1 == '\0'){con_C_1 = destino;}
+          else if(con_C_2 == '\0'){con_C_2 = destino;}
+          else if(con_C_3 == '\0'){con_C_3 = destino;}
+          else if(con_C_4 == '\0'){con_C_4 = destino;}
+          else if(con_C_5 == '\0'){con_C_5 = destino;}
+     }
+     else if(origen == 'D'){
+          if(con_D_1 == '\0'){con_D_1 = destino;}
+          else if(con_D_2 == '\0'){con_D_2 = destino;}
+          else if(con_D_3 == '\0'){con_D_3 = destino;}
+          else if(con_D_4 == '\0'){con_D_4 = destino;}
+          else if(con_D_5 == '\0'){con_D_5 = destino;}
+     }
+     else if(origen == 'E'){
+
+          if(con_E_1 == '\0'){con_E_1 = destino;}
+          else if(con_E_2 == '\0'){con_E_2 = destino;}
+          else if(con_E_3 == '\0'){con_E_3 = destino;}
+          else if(con_E_4 == '\0'){con_E_4 = destino;}
+          else if(con_E_5 == '\0'){con_E_5 = destino;}
+     }
+     else if(origen == 'F'){
+          if(con_F_1 == '\0'){con_F_1 = destino;}
+          else if(con_F_2 == '\0'){con_F_2 = destino;}
+          else if(con_F_3 == '\0'){con_F_3 = destino;}
+          else if(con_F_4 == '\0'){con_F_4 = destino;}
+          else if(con_F_5 == '\0'){con_F_5 = destino;}
+     }
+     else if(origen == 'G'){
+          if(con_G_1 == '\0'){con_G_1 = destino;}
+          else if(con_G_2 == '\0'){con_G_2 = destino;}
+          else if(con_G_3 == '\0'){con_G_3 = destino;}
+          else if(con_G_4 == '\0'){con_G_4 = destino;}
+          else if(con_G_5 == '\0'){con_G_5 = destino;}
+     }
+     else if(origen == 'H'){
+          if(con_H_1 == '\0'){con_H_1 = destino;}
+          else if(con_H_2 == '\0'){con_H_2 = destino;}
+          else if(con_H_3 == '\0'){con_H_3 = destino;}
+          else if(con_H_4 == '\0'){con_H_4 = destino;}
+          else if(con_H_5 == '\0'){con_H_5 = destino;}
+     }
+     else if(origen == 'I'){
+          if(con_H_1 == '\0'){con_H_1 = destino;}
+          else if(con_I_2 == '\0'){con_I_2 = destino;}
+          else if(con_I_3 == '\0'){con_I_3 = destino;}
+          else if(con_I_4 == '\0'){con_I_4 = destino;}
+          else if(con_I_5 == '\0'){con_I_5 = destino;}
+     }
+     else if(origen == 'J'){
+          if(con_J_1 == '\0'){con_J_1 = destino;}
+          else if(con_J_2 == '\0'){con_J_2 = destino;}
+          else if(con_J_3 == '\0'){con_J_3 = destino;}
+          else if(con_J_4 == '\0'){con_J_4 = destino;}
+          else if(con_J_5 == '\0'){con_J_5 = destino;}
+     }
+     else if(origen == 'K'){
+          if(con_K_1 == '\0'){con_K_1 = destino;}
+          else if(con_K_2 == '\0'){con_K_2 = destino;}
+          else if(con_K_3 == '\0'){con_K_3 = destino;}
+          else if(con_K_4 == '\0'){con_K_4 = destino;}
+          else if(con_K_5 == '\0'){con_K_5 = destino;}
+     }
+     else if(origen == 'L'){
+          if(con_L_1 == '\0'){con_L_1 = destino;}
+          else if(con_L_2 == '\0'){con_L_2 = destino;}
+          else if(con_L_3 == '\0'){con_L_3 = destino;}
+          else if(con_L_4 == '\0'){con_L_4 = destino;}
+          else if(con_L_5 == '\0'){con_L_5 = destino;}
+     }
+     else if(origen == 'M'){
+          if(con_M_1 == '\0'){con_M_1 = destino;}
+          else if(con_M_2 == '\0'){con_M_2 = destino;}
+          else if(con_M_3 == '\0'){con_M_3 = destino;}
+          else if(con_M_4 == '\0'){con_M_4 = destino;}
+          else if(con_M_5 == '\0'){con_M_5 = destino;}
+     }
+     else if(origen == 'N'){
+          if(con_N_1 == '\0'){con_N_1 = destino;}
+          else if(con_N_2 == '\0'){con_N_2 = destino;}
+          else if(con_N_3 == '\0'){con_N_3 = destino;}
+          else if(con_N_4 == '\0'){con_N_4 = destino;}
+          else if(con_N_5 == '\0'){con_N_5 = destino;}
+     }
+     else if(origen == 'O'){
+          if(con_O_1 == '\0'){con_O_1 = destino;}
+          else if(con_O_2 == '\0'){con_O_2 = destino;}
+          else if(con_O_3 == '\0'){con_O_3 = destino;}
+          else if(con_O_4 == '\0'){con_O_4 = destino;}
+          else if(con_O_5 == '\0'){con_O_5 = destino;}
+     }
+     else if(origen == 'P'){
+          if(con_P_1 == '\0'){con_P_1 = destino;}
+          else if(con_P_2 == '\0'){con_P_2 = destino;}
+          else if(con_P_3 == '\0'){con_P_3 = destino;}
+          else if(con_P_4 == '\0'){con_P_4 = destino;}
+          else if(con_P_5 == '\0'){con_P_5 = destino;}
+     }
+     else if(origen == 'Q'){
+          if(con_Q_1 == '\0'){con_Q_1 = destino;}
+          else if(con_Q_2 == '\0'){con_Q_2 = destino;}
+          else if(con_Q_3 == '\0'){con_Q_3 = destino;}
+          else if(con_Q_4 == '\0'){con_Q_4 = destino;}
+          else if(con_Q_5 == '\0'){con_Q_5 = destino;}
+     }
+     else if(origen == 'R'){
+          if(con_R_1 == '\0'){con_R_1 = destino;}
+          else if(con_R_2 == '\0'){con_R_2 = destino;}
+          else if(con_R_3 == '\0'){con_R_3 = destino;}
+          else if(con_R_4 == '\0'){con_R_4 = destino;}
+          else if(con_R_5 == '\0'){con_R_5 = destino;}
+     }
+     else if(origen == 'S'){
+          if(con_S_1 == '\0'){con_S_1 = destino;}
+          else if(con_S_2 == '\0'){con_S_2 = destino;}
+          else if(con_S_3 == '\0'){con_S_3 = destino;}
+          else if(con_S_4 == '\0'){con_S_4 = destino;}
+          else if(con_S_5 == '\0'){con_S_5 = destino;}
+     }
+     else if(origen == 'T'){
+          if(con_T_1 == '\0'){con_T_1 = destino;}
+          else if(con_T_2 == '\0'){con_T_2 = destino;}
+          else if(con_T_3 == '\0'){con_T_3 = destino;}
+          else if(con_T_4 == '\0'){con_T_4 = destino;}
+          else if(con_T_5 == '\0'){con_T_5 = destino;}
+     }
+     else if(origen == 'U'){
+          if(con_U_1 == '\0'){con_U_1 = destino;}
+          else if(con_U_2 == '\0'){con_U_2 = destino;}
+          else if(con_U_3 == '\0'){con_U_3 = destino;}
+          else if(con_U_4 == '\0'){con_U_4 = destino;}
+          else if(con_U_5 == '\0'){con_U_5 = destino;}
+     }
+     else if(origen == 'V'){
+          if(con_V_1 == '\0'){con_V_1 = destino;}
+          else if(con_V_2 == '\0'){con_V_2 = destino;}
+          else if(con_V_3 == '\0'){con_V_3 = destino;}
+          else if(con_V_4 == '\0'){con_V_4 = destino;}
+          else if(con_V_5 == '\0'){con_V_5 = destino;}
+     }
+     else if(origen == 'W'){
+          if(con_W_1 == '\0'){con_W_1 = destino;}
+          else if(con_W_2 == '\0'){con_W_2 = destino;}
+          else if(con_W_3 == '\0'){con_W_3 = destino;}
+          else if(con_W_4 == '\0'){con_W_4 = destino;}
+          else if(con_W_5 == '\0'){con_W_5 = destino;}
+     }
+     else if(origen == 'X'){
+          if(con_X_1 == '\0'){con_X_1 = destino;}
+          else if(con_X_2 == '\0'){con_X_2 = destino;}
+          else if(con_X_3 == '\0'){con_X_3 = destino;}
+          else if(con_X_4 == '\0'){con_X_4 = destino;}
+          else if(con_X_5 == '\0'){con_X_5 = destino;}
+     }
+     else if(origen == 'Y'){
+          if(con_Y_1 == '\0'){con_Y_1 = destino;}
+          else if(con_Y_2 == '\0'){con_Y_2 = destino;}
+          else if(con_Y_3 == '\0'){con_Y_3 = destino;}
+          else if(con_Y_4 == '\0'){con_Y_4 = destino;}
+          else if(con_Y_5 == '\0'){con_Y_5 = destino;}
+     }
+     else if(origen == 'Z'){
+          if(con_Z_1 == '\0'){con_Z_1 = destino;}
+          else if(con_Z_2 == '\0'){con_Z_2 = destino;}
+          else if(con_Z_3 == '\0'){con_Z_3 = destino;}
+          else if(con_Z_4 == '\0'){con_Z_4 = destino;}
+          else if(con_Z_5 == '\0'){con_Z_5 = destino;}
+     }
+}
+
 void energia_por_planeta(char P, int X){
     if(P == 'A'){
          energy_planet_A += X;
@@ -225,15 +440,15 @@ int main (){
     cin >> N;
 
     for(int i = 0; i<N; i++){
-        cout<<"entrando al P1 y P2"<<endl;
         cin>> P1 >> P2;
         registro_de_planetas(P1);
         registro_de_planetas(P2);
+        conexiones(P1, P2);
+        conexiones(P2, P1); //como los portales van de un punto A a un punto B, entonces también van a ir de B a A, pq es bidireccional
     }
 
 
     for(int i = 0; i<contador_planetas; i++){
-        cout<<"Entrando a energia"<<endl;
         cin>> P >> X;
         energia_por_planeta(P, X);
     }
@@ -246,6 +461,13 @@ int main (){
     cin >> F;
 
     cin >> M;
+
+    char planeta_actual_viajero = E;       // El viajero comienza en el planeta E (leído de la entrada)
+    int tiempo_total_acumulado = 0;        // Acumulará los años de viaje
+    bool fallo_por_energia = false;        // Bandera si la energía es insuficiente
+    bool fallo_por_vida = false;           // Bandera si la vida se acaba
+    char planeta_final_alcanzado = E;      // Dónde termina realmente (inicialmente en E)
+
 
     return 0;
 
