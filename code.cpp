@@ -218,7 +218,7 @@ void conexiones(char origen, char destino){
           else if(con_H_5 == '\0'){con_H_5 = destino;}
      }
      else if(origen == 'I'){
-          if(con_H_1 == '\0'){con_H_1 = destino;}
+          if(con_I_1 == '\0'){con_I_1 = destino;}
           else if(con_I_2 == '\0'){con_I_2 = destino;}
           else if(con_I_3 == '\0'){con_I_3 = destino;}
           else if(con_I_4 == '\0'){con_I_4 = destino;}
@@ -426,6 +426,175 @@ void energia_por_planeta(char P, int X){
     }
 }
 
+int tiempo_del_salto(char planeta_actual, char proximo_planeta){
+     int distancia = 0;
+     distancia = abs(planeta_actual - proximo_planeta);
+     return distancia;
+}
+
+int obtener_energia(char planeta_actual){
+          if(planeta_actual == 'A'){
+               return energy_planet_A;
+          }
+          else if(planeta_actual == 'B'){
+               return energy_planet_B;
+          }
+          else if(planeta_actual == 'C'){
+               return energy_planet_C;
+          }
+          else if(planeta_actual == 'D'){
+               return energy_planet_D;
+          }
+          else if(planeta_actual == 'E'){
+               return energy_planet_E;
+          }
+          else if(planeta_actual == 'F'){
+               return energy_planet_F;
+          }
+          else if(planeta_actual == 'G'){
+               return energy_planet_G;
+          }
+          else if(planeta_actual == 'H'){
+               return energy_planet_H;
+          }
+          else if(planeta_actual == 'I'){
+               return energy_planet_I;
+          }
+          else if(planeta_actual == 'J'){
+               return energy_planet_J;
+          }
+          else if(planeta_actual == 'K'){
+               return energy_planet_K;
+          }
+          else if(planeta_actual == 'L'){
+               return energy_planet_L;
+          }
+          else if(planeta_actual == 'M'){
+               return energy_planet_M;
+          }
+          else if(planeta_actual == 'N'){
+               return energy_planet_N;
+          }
+          else if(planeta_actual == 'O'){
+               return energy_planet_O;
+          }
+          else if(planeta_actual == 'P'){
+               return energy_planet_P;
+          }
+          else if(planeta_actual == 'Q'){
+               return energy_planet_Q;
+          }
+          else if(planeta_actual == 'R'){
+               return energy_planet_R;
+          }
+          else if(planeta_actual == 'S'){
+               return energy_planet_S;
+          }
+          else if(planeta_actual == 'T'){
+               return energy_planet_T;
+          }
+          else if(planeta_actual == 'U'){
+               return energy_planet_U;
+          }
+          else if(planeta_actual == 'V'){
+               return energy_planet_V;
+          }
+          else if(planeta_actual == 'W'){
+               return energy_planet_W;
+          }
+          else if(planeta_actual == 'X'){
+               return energy_planet_X;
+          }
+          else if(planeta_actual == 'Y'){
+               return energy_planet_Y;
+          }
+          else if(planeta_actual == 'Z'){
+               return energy_planet_Z;
+          }
+     return 0;
+}
+
+void usar_energia(char planeta_actual, int energia){
+     if(planeta_actual == 'A'){
+          energy_planet_A -= energia;
+     }
+     else if(planeta_actual == 'B'){
+          energy_planet_B -= energia;
+     }
+     else if(planeta_actual == 'C'){
+          energy_planet_C -= energia;
+     }
+     else if(planeta_actual == 'D'){
+          energy_planet_D -= energia;
+     }
+     else if(planeta_actual == 'E'){
+          energy_planet_E -= energia;
+     }
+     else if(planeta_actual == 'F'){
+          energy_planet_F -= energia;
+     }
+     else if(planeta_actual == 'G'){
+          energy_planet_G -= energia;
+     }
+     else if(planeta_actual == 'H'){
+          energy_planet_H -= energia;
+     }
+     else if(planeta_actual == 'I'){
+          energy_planet_I -= energia;
+     }
+     else if(planeta_actual == 'J'){
+          energy_planet_J -= energia;
+     }
+     else if(planeta_actual == 'K'){
+          energy_planet_K -= energia;
+     }
+     else if(planeta_actual == 'L'){
+          energy_planet_L -= energia;
+     }
+     else if(planeta_actual == 'M'){
+          energy_planet_M -= energia;
+     }
+     else if(planeta_actual == 'N'){
+          energy_planet_N -= energia;
+     }
+     else if(planeta_actual == 'O'){
+          energy_planet_O -= energia;
+     }
+     else if(planeta_actual == 'P'){
+          energy_planet_P -= energia;
+     }
+     else if(planeta_actual == 'Q'){
+          energy_planet_Q -= energia;
+     }
+     else if(planeta_actual == 'R'){
+          energy_planet_R -= energia;
+     }
+     else if(planeta_actual == 'S'){
+          energy_planet_S -= energia;
+     }
+     else if(planeta_actual == 'T'){
+          energy_planet_T -= energia;
+     }
+     else if(planeta_actual == 'U'){
+          energy_planet_U -= energia;
+     }
+     else if(planeta_actual == 'V'){
+          energy_planet_V -= energia;
+     }
+     else if(planeta_actual == 'W'){
+          energy_planet_W -= energia;
+     }
+     else if(planeta_actual == 'X'){
+          energy_planet_X -= energia;
+     }
+     else if(planeta_actual == 'Y'){
+          energy_planet_Y -= energia;
+     }
+     else if(planeta_actual == 'Z'){
+          energy_planet_Z -= energia;
+     }
+}
+
 int main (){
 
     int N;     //Número de portales encontrados
@@ -462,12 +631,53 @@ int main (){
 
     cin >> M;
 
-    char planeta_actual_viajero = E;       // El viajero comienza en el planeta E (leído de la entrada)
-    int tiempo_total_acumulado = 0;        // Acumulará los años de viaje
-    bool fallo_por_energia = false;        // Bandera si la energía es insuficiente
-    bool fallo_por_vida = false;           // Bandera si la vida se acaba
-    char planeta_final_alcanzado = E;      // Dónde termina realmente (inicialmente en E)
+    bool condicion_vida = false, condicion_energy = false;
+    char planeta_actual = E, planeta_final;
+    int tiempo_total_viaje = 0;
+    int vida_viajero = V;
 
+    for(int i = 0; i < M; i++){
+
+     char proximo_planeta;
+     cin >> proximo_planeta;
+
+     int tiempo_salto = tiempo_del_salto(planeta_actual, proximo_planeta);
+     tiempo_total_viaje += tiempo_salto;
+
+     if(vida_viajero < tiempo_salto){
+          condicion_vida = true;
+     }
+     else if(obtener_energia(planeta_actual) < tiempo_salto){
+          condicion_energy = true;
+     }
+     else{
+          vida_viajero -= tiempo_salto;
+          usar_energia(planeta_actual, tiempo_salto);
+          planeta_actual = proximo_planeta;
+     }
+    }
+
+    planeta_final = planeta_actual;
+
+    if(condicion_vida == true){
+          cout<<1<<endl;
+    }
+    else if(condicion_energy == true){
+          cout<<5<<endl;
+    }
+    else{
+          if(planeta_final == E){
+               cout<<3<<endl;
+          }
+          else if(planeta_final == F){
+               cout<<4<<endl;
+          }
+          else{
+               cout<<2<<endl;
+          }
+    }
+
+    cout<<tiempo_total_viaje<<endl;
 
     return 0;
 
